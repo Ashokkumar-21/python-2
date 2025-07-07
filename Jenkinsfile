@@ -16,6 +16,7 @@ pipeline {
                 ])
             }
         }
+
         stage('Build Docker Image') {
             steps {
                 script {
@@ -23,6 +24,7 @@ pipeline {
                 }
             }
         }
+
         stage('Login to DockerHub') {
             steps {
                 script {
@@ -32,6 +34,7 @@ pipeline {
                 }
             }
         }
+
         stage('Push to DockerHub') {
             steps {
                 script {
@@ -39,6 +42,7 @@ pipeline {
                 }
             }
         }
+
         stage('Pull from DockerHub') {
             steps {
                 script {
@@ -46,6 +50,7 @@ pipeline {
                 }
             }
         }
+
         stage('Run Docker Container') {
             steps {
                 script {
@@ -53,17 +58,17 @@ pipeline {
                 }
             }
         }
-        post {
-            always {
-                script {
-                    sh '''
-                    docker ps -q --filter ancestor=${IMAGE_NAME} | xargs -r docker rm -f
-                    docker rmi ${IMAGE_NAME} || true
-                    docker logout || true
-                    '''
-                }
+    }
+
+    post {
+        always {
+            script {
+                sh '''
+                  docker ps -q --filter ancestor=${IMAGE_NAME} | xargs -r docker rm -f
+                  docker rmi ${IMAGE_NAME} || true
+                  docker logout || true
+                '''
             }
         }
-        
     }
 }
