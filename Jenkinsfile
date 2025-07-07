@@ -39,6 +39,20 @@ pipeline {
                 }
             }
         }
+        stage('Pull from DockerHub') {
+            steps {
+                script {
+                    sh "docker pull ${IMAGE_NAME}"
+                }
+            }
+        }
+        stage('Create Pods form Build Image') {
+            steps {
+                script {
+                    sh "docker run -itd -p 5000:5000 ${IMAGE_NAME}"
+                }
+            }
+        }
         stage('Cleanup') {
             steps {
                 script {
