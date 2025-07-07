@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "shashivar04/jenkins_batch2:latest"
+        IMAGE_NAME = "ashok2102/python1:latest"
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
                 checkout([$class: 'GitSCM',
                           branches: [[name: '*/main']],
                           userRemoteConfigs: [[
-                              url: 'https://github.com/shashi04/Jenkins-batch2.git'
+                              url: 'https://github.com/Ashokkumar-21/python-2.git'
                           ]]
                 ])
             }
