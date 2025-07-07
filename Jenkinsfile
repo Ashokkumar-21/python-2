@@ -46,17 +46,21 @@ pipeline {
                 }
             }
         }
-        stage('Create Pods form the Build Image') {
+        stage('Run Docker Container') {
             steps {
                 script {
                     sh "docker run -itd -p 5000:5000 ${IMAGE_NAME}"
                 }
             }
         }
-        stage('Cleanup') {
-            steps {
+        post {
+            always {
                 script {
-                    sh "docker rmi ${IMAGE_NAME}"
+                    sh '''
+                    docker ps -q --filter ancestor=${IMAGE_NAME} | xargs -r docker rm -f
+                    docker rmi ${IMAGE_NAME} || true
+                    docker logout || true
+                    '''
                 }
             }
         }
