@@ -58,16 +58,11 @@ pipeline {
                 }
             }
         }
-    }
-
-    post {
-        always {
-            script {
-                sh '''
-                  docker ps -q --filter ancestor=${IMAGE_NAME} | xargs -r docker rm -f
-                  docker rmi ${IMAGE_NAME} || true
-                  docker logout || true
-                '''
+        stage('Cleanup') {
+            steps {
+                script {
+                    sh "docker rmi ${IMAGE_NAME}"
+                }
             }
         }
     }
