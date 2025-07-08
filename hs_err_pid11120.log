@@ -1,0 +1,236 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3618), pid=11120, tid=11288
+#
+# JRE version:  (17.0.15+6) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.15+6, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms256m -Xmx2048m c:\Users\JARVIS\.vscode\extensions\nicolasvuillamy.vscode-groovy-lint-3.3.1\server\node_modules\npm-groovy-lint\lib/java/CodeNarcServer.jar --file C:\Users\JARVIS\AppData\Local\Temp\npm-groovy-lint\codeNarcTmpDir_0.6443146762697158\Jenkinsfile --parse -basedir=C:\Users\JARVIS\AppData\Local\Temp\npm-groovy-lint\codeNarcTmpDir_0.6443146762697158 -ruleset=%7B%22AbstractClassName%22%3A%7B%7D%2C%22AbstractClassWithoutAbstractMethod%22%3A%7B%7D%2C%22AbstractClassWithPublicConstructor%22%3A%7B%7D%2C%22AddEmptyString%22%3A%7B%7D%2C%22AssertWithinFinallyBlock%22%3A%7B%7D%2C%22AssignCollectionSort%22%3A%7B%7D%2C%22AssignCollectionUnique%22%3A%7B%7D%2C%22AssignmentInConditional%22%3A%7B%7D%2C%22AssignmentToStaticFieldFromInstanceMethod%22%3A%7B%7D%2C%22BigDecimalInstantiation%22%3A%7B%7D%2C%22BitwiseOperatorInConditional%22%3A%7B%7D%2C%22BlankLineBeforePackage%22%3A%7B%7D%2C%22BlockEndsWithBlankLine%22%3A%7B%7D%2C%22BlockStartsWithBlankLine%22%3A%7B%7D%2C%22BooleanGetBoolean%22%3A%7B%7D%2C%22BooleanMethodReturnsNull%22%3A%7B%7D%2C%22BracesForClass%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForForLoop%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForIfElse%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForMethod%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForTryCatchFinally%22%3A%7B%22priority%22%3A3%7D%2C%22BrokenNullCheck%22%3A%7B%7D%2C%22BrokenOddnessCheck%22%3A%7B%7D%2C%22BuilderMethodWithSideEffects%22%3A%7B%7D%2C%22BusyWait%22%3A%7B%7D%2C%22CatchArrayIndexOutOfBoundsException%22%3A%7B%7D%2C%22CatchError%22%3A%7B%7D%2C%22CatchException%22%3A%7B%7D%2C%22CatchIllegalMonitorStateException%22%3A%7B%7D%2C%22CatchIndexOutOfBoundsException%22%3A%7B%7D%2C%22CatchNullPointerException%22%3A%7B%7D%2C%22CatchRuntimeException%22%3A%7B%7D%2C%22CatchThrowable%22%3A%7B%7D%2C%22ChainedTest%22%3A%7B%7D%2C%22ClassEndsWithBlankLine%22%3A%7B%7D%2C%22ClassForName%22%3A%7B%7D%2C%22ClassJavadoc%22%3A%7B%7D%2C%22ClassName%22%3A%7B%7D%2C%22ClassNameSameAsFilename%22%3A%7B%7D%2C%22ClassNameSameAsSuperclass%22%3A%7B%7D%2C%22ClassSize%22%3A%7B%7D%2C%22ClassStartsWithBlankLine%22%3A%7B%7D%2C%22CloneableWithoutClone%22%3A%7B%7D%2C%22CloneWithoutCloneable%22%3A%7B%7D%2C%22CloseWithoutCloseable%22%3A%7B%7D%2C%22ClosureAsLastMethodParameter%22%3A%7B%7D%2C%22ClosureStatementOnOpeningLineOfMultipleLineClosure%22%3A%7B%7D%2C%22CollectAllIsDeprecated%22%3A%7B%7D%2C%22CompareToWithoutComparable%22%3A%7B%7D%2C%22ComparisonOfTwoConstants%22%3A%7B%7D%2C%22ComparisonWithSelf%22%3A%7B%7D%2C%22CompileStatic%22%3A%7B%22priority%22%3A3%7D%2C%22ConfusingClassNamedException%22%3A%7B%7D%2C%22ConfusingMethodName%22%3A%7B%7D%2C%22ConfusingMultipleReturns%22%3A%7B%7D%2C%22ConfusingTernary%22%3A%7B%7D%2C%22ConsecutiveBlankLines%22%3A%7B%7D%2C%22ConsecutiveLiteralAppends%22%3A%7B%7D%2C%22ConsecutiveStringConcatenation%22%3A%7B%7D%2C%22ConstantAssertExpression%22%3A%7B%7D%2C%22ConstantIfExpression%22%3A%7B%7D%2C%22ConstantsOnlyInterface%22%3A%7B%7D%2C%22ConstantTernaryExpression%22%3A%7B%7D%2C%22CouldBeElvis%22%3A%7B%7D%2C%22CouldBeSwitchStatement%22%3A%7B%7D%2C%22CoupledTestCase%22%3A%7B%7D%2C%22DeadCode%22%3A%7B%22priority%22%3A1%7D%2C%22DirectConnectionManagement%22%3A%7B%7D%2C%22DoubleCheckedLocking%22%3A%7B%7D%2C%22DoubleNegative%22%3A%7B%7D%2C%22DuplicateCaseStatement%22%3A%7B%7D%2C%22DuplicateImport%22%3A%7B%7D%2C%22DuplicateListLiteral%22%3A%7B%22priority%22%3A3%7D%2C%22DuplicateMapKey%22%3A%7B%7D%2C%22DuplicateMapLiteral%22%3A%7B%22priority%22%3A2%7D%2C%22DuplicateNumberLiteral%22%3A%7B%22priority%22%3A3%2C%22ignoreNumbers%22%3A%5B0%2C1%2C2%2C3%2C-1%5D%7D%2C%22DuplicateSetValue%22%3A%7B%7D%2C%22DuplicateStringLiteral%22%3A%7B%22priority%22%3A3%7D%2C%22ElseBlockBraces%22%3A%7B%7D%2C%22EmptyCatchBlock%22%3A%7B%7D%2C%22EmptyClass%22%3A%7B%7D%2C%22EmptyElseBlock%22%3A%7B%7D%2C%22EmptyFinallyBlock%22%3A%7B%7D%2C%22EmptyForStatement%22%3A%7B%7D%2C%22EmptyIfStatement%22%3A%7B%7D%2C%22EmptyInstanceInitializer%22%3A%7B%7D%2C%22EmptyMethod%22%3A%7B%7D%2C%22EmptyMethodInAbstractClass%22%3A%7B%7D%2C%22EmptyStaticInitializer%22%3A%7B%7D%2C%22EmptySwitchStatement%22%3A%7B%7D%2C%22EmptySynchronizedStatement%22%3A%7B%7D%2C%22EmptyTryBlock%22%3A%7B%7D%2C%22EmptyWhileStatement%22%3A%7B%7D%2C%22EnumCustomSerializationIgnored%22%3A%7B%7D%2C%22EqualsAndHashCode%22%3A%7B%7D%2C%22EqualsOverloaded%22%3A%7B%7D%2C%22ExceptionExtendsError%22%3A%7B%7D%2C%22ExceptionExtendsThrowable%22%3A%7B%7D%2C%22ExceptionNotThrown%22%3A%7B%7D%2C%22ExplicitArrayListInstantiation%22%3A%7B%7D%2C%22ExplicitCallToAndMethod%22%3A%7B%7D%2C%22ExplicitCallToCompareToMethod%22%3A%7B%7D%2C%22ExplicitCallToDivMethod%22%3A%7B%7D%2C%22ExplicitCallToEqualsMethod%22%3A%7B%22priority%22%3A3%7D%2C%22ExplicitCallToGetAtMethod%22%3A%7B%7D%2C%22ExplicitCallToLeftShiftMethod%22%3A%7B%7D%2C%22ExplicitCallToMinusMethod%22%3A%7B%7D%2C%22ExplicitCallToModMethod%22%3A%7B%7D%2C%22ExplicitCallToMultiplyMethod%22%3A%7B%7D%2C%22ExplicitCallToOrMethod%22%3A%7B%7D%2C%22ExplicitCallToPlusMethod%22%3A%7B%7D%2C%22ExplicitCallToPowerMethod%22%3A%7B%7D%2C%22ExplicitCallToPutAtMethod%22%3A%7B%7D%2C%22ExplicitCallToRightShiftMethod%22%3A%7B%7D%2C%22ExplicitCallToXorMethod%22%3A%7B%7D%2C%22ExplicitGarbageCollection%22%3A%7B%7D%2C%22ExplicitHashMapInstantiation%22%3A%7B%7D%2C%22ExplicitHashSetInstantiation%22%3A%7B%7D%2C%22ExplicitLinkedHashMapInstantiation%22%3A%7B%7D%2C%22ExplicitLinkedListInstantiation%22%3A%7B%7D%2C%22ExplicitStackInstantiation%22%3A%7B%7D%2C%22ExplicitTreeSetInstantiation%22%3A%7B%7D%2C%22FactoryMethodName%22%3A%7B%7D%2C%22FieldName%22%3A%7B%7D%2C%22FieldTypeRequired%22%3A%7B%22priority%22%3A3%7D%2C%22FileCreateTempFile%22%3A%7B%7D%2C%22FileEndsWithoutNewline%22%3A%7B%7D%2C%22FinalClassWithProtectedMember%22%3A%7B%7D%2C%22ForLoopShouldBeWhileLoop%22%3A%7B%7D%2C%22ForStatementBraces%22%3A%7B%7D%2C%22GetterMethodCouldBeProperty%22%3A%7B%7D%2C%22GrailsDomainGormMethods%22%3A%7B%7D%2C%22GrailsDomainHasEquals%22%3A%7B%7D%2C%22GrailsDomainHasToString%22%3A%7B%7D%2C%22GrailsDomainReservedSqlKeywordName%22%3A%7B%7D%2C%22GrailsDomainStringPropertyMaxSize%22%3A%7B%7D%2C%22GrailsDomainWithServiceReference%22%3A%7B%7D%2C%22GrailsDuplicateConstraint%22%3A%7B%7D%2C%22GrailsDuplicateMapping%22%3A%7B%7D%2C%22GrailsMassAssignment%22%3A%7B%7D%2C%22GrailsPublicControllerMethod%22%3A%7B%7D%2C%22GrailsServletContextReference%22%3A%7B%7D%2C%22GrailsStatelessService%22%3A%7B%7D%2C%22GroovyLangImmutable%22%3A%7B%7D%2C%22GStringAsMapKey%22%3A%7B%7D%2C%22GStringExpressionWithinString%22%3A%7B%7D%2C%22HardCodedWindowsFileSeparator%22%3A%7B%7D%2C%22HardCodedWindowsRootDirectory%22%3A%7B%7D%2C%22HashtableIsObsolete%22%3A%7B%7D%2C%22IfStatementBraces%22%3A%7B%7D%2C%22IfStatementCouldBeTernary%22%3A%7B%22priority%22%3A3%7D%2C%22IllegalClassMember%22%3A%7B%7D%2C%22IllegalClassReference%22%3A%7B%7D%2C%22IllegalPackageReference%22%3A%7B%7D%2C%22IllegalRegex%22%3A%7B%7D%2C%22IllegalString%22%3A%7B%7D%2C%22IllegalSubclass%22%3A%7B%7D%2C%22ImplementationAsType%22%3A%7B%7D%2C%22ImplicitClosureParameter%22%3A%7B%7D%2C%22ImplicitReturnStatement%22%3A%7B%7D%2C%22ImportFromSamePackage%22%3A%7B%7D%2C%22ImportFromSunPackages%22%3A%7B%7D%2C%22InconsistentPropertyLocking%22%3A%7B%7D%2C%22InconsistentPropertySynchronization%22%3A%7B%7D%2C%22Indentation%22%3A%7B%22priority%22%3A3%2C%22spacesPerIndentLevel%22%3A4%2C%22enabled%22%3Atrue%7D%2C%22InsecureRandom%22%3A%7B%7D%2C%22Instanceof%22%3A%7B%7D%2C%22IntegerGetInteger%22%3A%7B%7D%2C%22InterfaceName%22%3A%7B%7D%2C%22InterfaceNameSameAsSuperInterface%22%3A%7B%7D%2C%22InvertedCondition%22%3A%7B%7D%2C%22InvertedIfElse%22%3A%7B%7D%2C%22JavadocConsecutiveEmptyLines%22%3A%7B%7D%2C%22JavadocEmptyAuthorTag%22%3A%7B%7D%2C%22JavadocEmptyExceptionTag%22%3A%7B%7D%2C%22JavadocEmptyFirstLine%22%3A%7B%7D%2C%22JavadocEmptyLastLine%22%3A%7B%7D%2C%22JavadocEmptyParamTag%22%3A%7B%7D%2C%22JavadocEmptyReturnTag%22%3A%7B%7D%2C%22JavadocEmptySeeTag%22%3A%7B%7D%2C%22JavadocEmptySinceTag%22%3A%7B%7D%2C%22JavadocEmptyThrowsTag%22%3A%7B%7D%2C%22JavadocEmptyVersionTag%22%3A%7B%7D%2C%22JavadocMissingExceptionDescription%22%3A%7B%7D%2C%22JavadocMissingParamDescription%22%3A%7B%7D%2C%22JavadocMissingThrowsDescription%22%3A%7B%7D%2C%22JavaIoPackageAccess%22%3A%7B%7D%2C%22JdbcConnectionReference%22%3A%7B%7D%2C%22JdbcResultSetReference%22%3A%7B%7D%2C%22JdbcStatementReference%22%3A%7B%7D%2C%22JUnitAssertAlwaysFails%22%3A%7B%7D%2C%22JUnitAssertAlwaysSucceeds%22%3A%7B%7D%2C%22JUnitAssertEqualsConstantActualValue%22%3A%7B%7D%2C%22JUnitFailWithoutMessage%22%3A%7B%7D%2C%22JUnitLostTest%22%3A%7B%7D%2C%22JUnitPublicField%22%3A%7B%7D%2C%22JUnitPublicNonTestMethod%22%3A%7B%7D%2C%22JUnitPublicProperty%22%3A%7B%7D%2C%22JUnitSetUpCallsSuper%22%3A%7B%7D%2C%22JUnitStyleAssertions%22%3A%7B%7D%2C%22JUnitTearDownCallsSuper%22%3A%7B%7D%2C%22JUnitTestMethodWithoutAssert%22%3A%7B%7D%2C%22JUnitUnnecessarySetUp%22%3A%7B%7D%2C%22JUnitUnnecessaryTearDown%22%3A%7B%7D%2C%22JUnitUnnecessaryThrowsException%22%3A%7B%7D%2C%22LineLength%22%3A%7B%7D%2C%22LocaleSetDefault%22%3A%7B%7D%2C%22LoggerForDifferentClass%22%3A%7B%7D%2C%22LoggerWithWrongModifiers%22%3A%7B%7D%2C%22LoggingSwallowsStacktrace%22%3A%7B%7D%2C%22LongLiteralWithLowerCaseL%22%3A%7B%7D%2C%22MethodCount%22%3A%7B%7D%2C%22MethodName%22%3A%7B%7D%2C%22MethodParameterTypeRequired%22%3A%7B%7D%2C%22MethodReturnTypeRequired%22%3A%7B%7D%2C%22MethodSize%22%3A%7B%7D%2C%22MisorderedStaticImports%22%3A%7B%7D%2C%22MissingBlankLineAfterImports%22%3A%7B%7D%2C%22MissingBlankLineAfterPackage%22%3A%7B%7D%2C%22MissingBlankLineBeforeAnnotatedField%22%3A%7B%7D%2C%22MissingNewInThrowStatement%22%3A%7B%7D%2C%22MissingOverrideAnnotation%22%3A%7B%7D%2C%22MultipleLoggers%22%3A%7B%7D%2C%22MultipleUnaryOperators%22%3A%7B%7D%2C%22NestedBlockDepth%22%3A%7B%7D%2C%22NestedForLoop%22%3A%7B%7D%2C%22NestedSynchronization%22%3A%7B%7D%2C%22NoDef%22%3A%7B%22priority%22%3A3%7D%2C%22NoDouble%22%3A%7B%7D%2C%22NoFloat%22%3A%7B%7D%2C%22NoJavaUtilDate%22%3A%7B%7D%2C%22NonFinalPublicField%22%3A%7B%7D%2C%22NonFinalSubclassOfSensitiveInterface%22%3A%7B%7D%2C%22NoTabCharacter%22%3A%7B%7D%2C%22NoWildcardImports%22%3A%7B%7D%2C%22ObjectFinalize%22%3A%7B%7D%2C%22ObjectOverrideMisspelledMethodName%22%3A%7B%7D%2C%22OptionalCollectionReturnType%22%3A%7B%7D%2C%22OptionalField%22%3A%7B%7D%2C%22OptionalMethodParameter%22%3A%7B%7D%2C%22PackageName%22%3A%7B%7D%2C%22PackageNameMatchesFilePath%22%3A%7B%7D%2C%22ParameterAssignmentInFilterClosure%22%3A%7B%7D%2C%22ParameterCount%22%3A%7B%7D%2C%22ParameterName%22%3A%7B%7D%2C%22ParameterReassignment%22%3A%7B%7D%2C%22PrintStackTrace%22%3A%7B%7D%2C%22PrivateFieldCouldBeFinal%22%3A%7B%7D%2C%22PropertyName%22%3A%7B%7D%2C%22PublicFinalizeMethod%22%3A%7B%7D%2C%22PublicInstanceField%22%3A%7B%7D%2C%22PublicMethodsBeforeNonPublicMethods%22%3A%7B%7D%2C%22RandomDoubleCoercedToZero%22%3A%7B%7D%2C%22RemoveAllOnSelf%22%3A%7B%7D%2C%22RequiredRegex%22%3A%7B%7D%2C%22RequiredString%22%3A%7B%7D%2C%22ReturnFromFinallyBlock%22%3A%7B%7D%2C%22ReturnNullFromCatchBlock%22%3A%7B%7D%2C%22ReturnsNullInsteadOfEmptyArray%22%3A%7B%7D%2C%22ReturnsNullInsteadOfEmptyCollection%22%3A%7B%7D%2C%22SerializableClassMustDefineSerialVersionUID%22%3A%7B%7D%2C%22SerialPersistentFields%22%3A%7B%7D%2C%22SerialVersionUID%22%3A%7B%7D%2C%22SimpleDateFormatMissingLocale%22%3A%7B%7D%2C%22SpaceAfterCatch%22%3A%7B%7D%2C%22SpaceAfterClosingBrace%22%3A%7B%7D%2C%22SpaceAfterComma%22%3A%7B%7D%2C%22SpaceAfterFor%22%3A%7B%7D%2C%22SpaceAfterIf%22%3A%7B%7D%2C%22SpaceAfterMethodCallName%22%3A%7B%7D%2C%22SpaceAfterMethodDeclarationName%22%3A%7B%7D%2C%22SpaceAfterNotOperator%22%3A%7B%7D%2C%22SpaceAfterOpeningBrace%22%3A%7B%7D%2C%22SpaceAfterSemicolon%22%3A%7B%7D%2C%22SpaceAfterSwitch%22%3A%7B%7D%2C%22SpaceAfterWhile%22%3A%7B%7D%2C%22SpaceAroundClosureArrow%22%3A%7B%7D%2C%22SpaceAroundOperator%22%3A%7B%7D%2C%22SpaceBeforeClosingBrace%22%3A%7B%7D%2C%22SpaceBeforeOpeningBrace%22%3A%7B%7D%2C%22SpaceInsideParentheses%22%3A%7B%7D%2C%22SpockIgnoreRestUsed%22%3A%7B%7D%2C%22StatelessClass%22%3A%7B%7D%2C%22StatelessSingleton%22%3A%7B%7D%2C%22StaticCalendarField%22%3A%7B%7D%2C%22StaticConnection%22%3A%7B%7D%2C%22StaticDateFormatField%22%3A%7B%7D%2C%22StaticFieldsBeforeInstanceFields%22%3A%7B%7D%2C%22StaticMatcherField%22%3A%7B%7D%2C%22StaticMethodsBeforeInstanceMethods%22%3A%7B%7D%2C%22StaticSimpleDateFormatField%22%3A%7B%7D%2C%22SwallowThreadDeath%22%3A%7B%7D%2C%22SynchronizedMethod%22%3A%7B%7D%2C%22SynchronizedOnBoxedPrimitive%22%3A%7B%7D%2C%22SynchronizedOnGetClass%22%3A%7B%7D%2C%22SynchronizedOnReentrantLock%22%3A%7B%7D%2C%22SynchronizedOnString%22%3A%7B%7D%2C%22SynchronizedOnThis%22%3A%7B%7D%2C%22SynchronizedReadObjectMethod%22%3A%7B%7D%2C%22SystemErrPrint%22%3A%7B%7D%2C%22SystemExit%22%3A%7B%7D%2C%22SystemOutPrint%22%3A%7B%7D%2C%22SystemRunFinalizersOnExit%22%3A%7B%7D%2C%22TernaryCouldBeElvis%22%3A%7B%7D%2C%22ThisReferenceEscapesConstructor%22%3A%7B%7D%2C%22ThreadGroup%22%3A%7B%7D%2C%22ThreadLocalNotStaticFinal%22%3A%7B%7D%2C%22ThreadYield%22%3A%7B%7D%2C%22ThrowError%22%3A%7B%7D%2C%22ThrowException%22%3A%7B%22priority%22%3A3%7D%2C%22ThrowExceptionFromFinallyBlock%22%3A%7B%7D%2C%22ThrowNullPointerException%22%3A%7B%22priority%22%3A3%7D%2C%22ThrowRuntimeException%22%3A%7B%22priority%22%3A3%7D%2C%22ThrowThrowable%22%3A%7B%22priority%22%3A3%7D%2C%22ToStringReturnsNull%22%3A%7B%7D%2C%22TrailingWhitespace%22%3A%7B%7D%2C%22UnnecessaryBigDecimalInstantiation%22%3A%7B%7D%2C%22UnnecessaryBigIntegerInstantiation%22%3A%7B%7D%2C%22UnnecessaryBooleanExpression%22%3A%7B%7D%2C%22UnnecessaryBooleanInstantiation%22%3A%7B%7D%2C%22UnnecessaryCallForLastElement%22%3A%7B%7D%2C%22UnnecessaryCallToSubstring%22%3A%7B%7D%2C%22UnnecessaryCast%22%3A%7B%7D%2C%22UnnecessaryCatchBlock%22%3A%7B%7D%2C%22UnnecessaryCollectCall%22%3A%7B%7D%2C%22UnnecessaryCollectionCall%22%3A%7B%7D%2C%22UnnecessaryConstructor%22%3A%7B%7D%2C%22UnnecessaryDefInFieldDeclaration%22%3A%7B%7D%2C%22UnnecessaryDefInMethodDeclaration%22%3A%7B%7D%2C%22UnnecessaryDefInVariableDeclaration%22%3A%7B%7D%2C%22UnnecessaryDotClass%22%3A%7B%7D%2C%22UnnecessaryDoubleInstantiation%22%3A%7B%7D%2C%22UnnecessaryElseStatement%22%3A%7B%7D%2C%22UnnecessaryFail%22%3A%7B%7D%2C%22UnnecessaryFinalOnPrivateMethod%22%3A%7B%7D%2C%22UnnecessaryFloatInstantiation%22%3A%7B%7D%2C%22UnnecessaryGetter%22%3A%7B%7D%2C%22UnnecessaryGroovyImport%22%3A%7B%7D%2C%22UnnecessaryGString%22%3A%7B%7D%2C%22UnnecessaryIfStatement%22%3A%7B%7D%2C%22UnnecessaryInstanceOfCheck%22%3A%7B%7D%2C%22UnnecessaryInstantiationToGetClass%22%3A%7B%7D%2C%22UnnecessaryIntegerInstantiation%22%3A%7B%7D%2C%22UnnecessaryLongInstantiation%22%3A%7B%7D%2C%22UnnecessaryModOne%22%3A%7B%7D%2C%22UnnecessaryNullCheck%22%3A%7B%7D%2C%22UnnecessaryNullCheckBeforeInstanceOf%22%3A%7B%7D%2C%22UnnecessaryObjectReferences%22%3A%7B%7D%2C%22UnnecessaryOverridingMethod%22%3A%7B%7D%2C%22UnnecessaryPackageReference%22%3A%7B%7D%2C%22UnnecessaryParenthesesForMethodCallWithClosure%22%3A%7B%7D%2C%22UnnecessaryPublicModifier%22%3A%7B%7D%2C%22UnnecessarySafeNavigationOperator%22%3A%7B%7D%2C%22UnnecessarySelfAssignment%22%3A%7B%7D%2C%22UnnecessarySemicolon%22%3A%7B%7D%2C%22UnnecessarySetter%22%3A%7B%7D%2C%22UnnecessaryStringInstantiation%22%3A%7B%7D%2C%22UnnecessaryTernaryExpression%22%3A%7B%7D%2C%22UnnecessaryToString%22%3A%7B%7D%2C%22UnnecessaryTransientModifier%22%3A%7B%7D%2C%22UnsafeArrayDeclaration%22%3A%7B%7D%2C%22UnsafeImplementationAsMap%22%3A%7B%7D%2C%22UnusedArray%22%3A%7B%22priority%22%3A1%7D%2C%22UnusedImport%22%3A%7B%7D%2C%22UnusedMethodParameter%22%3A%7B%7D%2C%22UnusedObject%22%3A%7B%22priority%22%3A1%7D%2C%22UnusedPrivateField%22%3A%7B%22priority%22%3A1%7D%2C%22UnusedPrivateMethod%22%3A%7B%22priority%22%3A1%7D%2C%22UnusedPrivateMethodParameter%22%3A%7B%22priority%22%3A1%7D%2C%22UnusedVariable%22%3A%7B%22priority%22%3A1%7D%2C%22UseAssertEqualsInsteadOfAssertTrue%22%3A%7B%7D%2C%22UseAssertFalseInsteadOfNegation%22%3A%7B%7D%2C%22UseAssertNullInsteadOfAssertEquals%22%3A%7B%7D%2C%22UseAssertSameInsteadOfAssertTrue%22%3A%7B%7D%2C%22UseAssertTrueInsteadOfAssertEquals%22%3A%7B%7D%2C%22UseAssertTrueInsteadOfNegation%22%3A%7B%7D%2C%22UseCollectMany%22%3A%7B%7D%2C%22UseCollectNested%22%3A%7B%7D%2C%22UseOfNotifyMethod%22%3A%7B%7D%2C%22VariableName%22%3A%7B%7D%2C%22VariableTypeRequired%22%3A%7B%22priority%22%3A3%7D%2C%22VectorIsObsolete%22%3A%7B%7D%2C%22VolatileArrayField%22%3A%7B%7D%2C%22VolatileLongOrDoubleField%22%3A%7B%7D%2C%22WaitOutsideOfWhileLoop%22%3A%7B%7D%2C%22WhileStatementBraces%22%3A%7B%7D%7D -includes=**/Jenkinsfile -report=json:stdout
+
+Host: Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz, 4 cores, 11G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+Time: Mon Jul  7 23:04:09 2025 India Standard Time elapsed time: 0.025957 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000022f92a3cdc0):  JavaThread "Unknown thread" [_thread_in_vm, id=11288, stack(0x0000003487000000,0x0000003487100000)]
+
+Stack: [0x0000003487000000,0x0000003487100000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x682fc9]
+V  [jvm.dll+0x839878]
+V  [jvm.dll+0x83b323]
+V  [jvm.dll+0x83b993]
+V  [jvm.dll+0x24725f]
+V  [jvm.dll+0x67fda9]
+V  [jvm.dll+0x674c9a]
+V  [jvm.dll+0x304d06]
+V  [jvm.dll+0x30c1c6]
+V  [jvm.dll+0x35dd4e]
+V  [jvm.dll+0x35df8d]
+V  [jvm.dll+0x2dc0cc]
+V  [jvm.dll+0x2dcfe4]
+V  [jvm.dll+0x80b7cb]
+V  [jvm.dll+0x36b781]
+V  [jvm.dll+0x7ea31f]
+V  [jvm.dll+0x3f237e]
+V  [jvm.dll+0x3f3eb1]
+C  [jli.dll+0x5278]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb79777f58, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000022f92a97240 GCTaskThread "GC Thread#0" [stack: 0x0000003487100000,0x0000003487200000] [id=4144]
+  0x0000022f92aa8190 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000003487200000,0x0000003487300000] [id=14248]
+  0x0000022f92aa8bb0 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000003487300000,0x0000003487400000] [id=2792]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb78f2cbf7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000022f92a37f60] Heap_lock - owner thread: 0x0000022f92a3cdc0
+
+Heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb7931c689]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.015 Loaded shared library C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff790d20000 - 0x00007ff790d2e000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\java.exe
+0x00007ffbc21b0000 - 0x00007ffbc23a8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffbc0dc0000 - 0x00007ffbc0e82000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffbbfb80000 - 0x00007ffbbfe76000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffbc00d0000 - 0x00007ffbc01d0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffbb89f0000 - 0x00007ffbb8a07000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\jli.dll
+0x00007ffbc1610000 - 0x00007ffbc17ad000 	C:\Windows\System32\USER32.dll
+0x00007ffbbf8c0000 - 0x00007ffbbf8e2000 	C:\Windows\System32\win32u.dll
+0x00007ffbc1500000 - 0x00007ffbc152b000 	C:\Windows\System32\GDI32.dll
+0x00007ffbbfe80000 - 0x00007ffbbff99000 	C:\Windows\System32\gdi32full.dll
+0x00007ffbbfae0000 - 0x00007ffbbfb7d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffbb8730000 - 0x00007ffbb874e000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\VCRUNTIME140.dll
+0x00007ffba7ac0000 - 0x00007ffba7d5a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.5915_none_60b4b9d171f9c7c7\COMCTL32.dll
+0x00007ffbc13a0000 - 0x00007ffbc143e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffbc1440000 - 0x00007ffbc146f000 	C:\Windows\System32\IMM32.DLL
+0x00007ffbbb360000 - 0x00007ffbbb36c000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\vcruntime140_1.dll
+0x00007ffbb82d0000 - 0x00007ffbb835d000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\msvcp140.dll
+0x00007ffb78c40000 - 0x00007ffb798ab000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\server\jvm.dll
+0x00007ffbc0ce0000 - 0x00007ffbc0d91000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffbc07d0000 - 0x00007ffbc086f000 	C:\Windows\System32\sechost.dll
+0x00007ffbc2030000 - 0x00007ffbc2153000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffbc0050000 - 0x00007ffbc0077000 	C:\Windows\System32\bcrypt.dll
+0x00007ffbc1330000 - 0x00007ffbc139b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffbbed40000 - 0x00007ffbbed8b000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ffbaa7f0000 - 0x00007ffbaa817000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffbb7de0000 - 0x00007ffbb7dea000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffbbec00000 - 0x00007ffbbec12000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ffbbe020000 - 0x00007ffbbe032000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffbba2c0000 - 0x00007ffbba2ca000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\jimage.dll
+0x00007ffbbd560000 - 0x00007ffbbd761000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffba2930000 - 0x00007ffba2964000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffbbfa50000 - 0x00007ffbbfad2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffbb82a0000 - 0x00007ffbb82c5000 	C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.5915_none_60b4b9d171f9c7c7;C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin\server
+
+VM Arguments:
+jvm_args: -Xms256m -Xmx2048m 
+java_command: c:\Users\JARVIS\.vscode\extensions\nicolasvuillamy.vscode-groovy-lint-3.3.1\server\node_modules\npm-groovy-lint\lib/java/CodeNarcServer.jar --file C:\Users\JARVIS\AppData\Local\Temp\npm-groovy-lint\codeNarcTmpDir_0.6443146762697158\Jenkinsfile --parse -basedir=C:\Users\JARVIS\AppData\Local\Temp\npm-groovy-lint\codeNarcTmpDir_0.6443146762697158 -ruleset=%7B%22AbstractClassName%22%3A%7B%7D%2C%22AbstractClassWithoutAbstractMethod%22%3A%7B%7D%2C%22AbstractClassWithPublicConstructor%22%3A%7B%7D%2C%22AddEmptyString%22%3A%7B%7D%2C%22AssertWithinFinallyBlock%22%3A%7B%7D%2C%22AssignCollectionSort%22%3A%7B%7D%2C%22AssignCollectionUnique%22%3A%7B%7D%2C%22AssignmentInConditional%22%3A%7B%7D%2C%22AssignmentToStaticFieldFromInstanceMethod%22%3A%7B%7D%2C%22BigDecimalInstantiation%22%3A%7B%7D%2C%22BitwiseOperatorInConditional%22%3A%7B%7D%2C%22BlankLineBeforePackage%22%3A%7B%7D%2C%22BlockEndsWithBlankLine%22%3A%7B%7D%2C%22BlockStartsWithBlankLine%22%3A%7B%7D%2C%22BooleanGetBoolean%22%3A%7B%7D%2C%22BooleanMethodReturnsNull%22%3A%7B%7D%2C%22BracesForClass%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForForLoop%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForIfElse%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForMethod%22%3A%7B%22priority%22%3A3%7D%2C%22BracesForTryCatchFinally%22%3A%7B%22priority%22%3A3%7D%2C%22BrokenNullCheck%22%3A%7B%7D%2C%22BrokenOddnessCheck%22%3A%7B%7D%2C%22BuilderMethodWithSideEffects%22%3A%7B%7D%2C%22BusyWait%22%3A%7B%7D%2C%22CatchArrayIndexOutOfBoundsException%22%3A%7B%7D%2C%22CatchError%22%3A%7B%7D%2C%22CatchException%22%3A%7B%7D%2C%22CatchIllegalMonitorStateException%22%3A%7B%7D%2C%22CatchIndexOutOfBoundsException%22%3A%7B%7D%2C%22CatchNullPointerException%22%3A%7B%7D%2C%22CatchRuntimeException%22%3A%7B%7D%2C%22CatchThrowable%22%3A%7B%7D%2C%22ChainedTest%22%3A%7B%7D%2C%22ClassEndsWithBlankLine%22%3A%7B%7D%2C%22ClassForName%22%3A%7B%7D%2C%22ClassJavadoc%22%3A%7B%7D%2C%22ClassName%22%3A%7B%7D%2C%22ClassNameSameAsFilename%22%3A%7B%7D%2C%22ClassNameSameAsSup
+java_class_path (initial): c:\Users\JARVIS\.vscode\extensions\nicolasvuillamy.vscode-groovy-lint-3.3.1\server\node_modules\npm-groovy-lint\lib/java/CodeNarcServer.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2147483648                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 268435456                                 {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2147483648                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre
+PATH=C:\Users\JARVIS\.java-caller\jre\jdk-17.0.15+6-jre\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;%MAVEN_HOME%\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Oracle\VirtualBox;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files (x86)\Vagrant\bin;C:\Users\JARVIS\AppData\Local\Microsoft\WindowsApps;C:\Users\JARVIS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\JARVIS\AppData\Roaming\npm;C:\apache-maven-3.9.10\bin;
+USERNAME=JARVIS
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+TMP=C:\Users\JARVIS\AppData\Local\Temp
+TEMP=C:\Users\JARVIS\AppData\Local\Temp
+
+
+
+Periodic native trim disabled
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+OS uptime: 0 days 4:56 hours
+Hyper-V role detected
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9 microcode 0xf6, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv
+Processor Information for all 4 processors :
+  Max Mhz: 2401, Current Mhz: 2401, Mhz Limit: 2401
+
+Memory: 4k page, system-wide physical 12190M (1653M free)
+TotalPageFile size 12190M (AvailPageFile size 259M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 52M, peak: 307M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.15+6) for windows-amd64 JRE (17.0.15+6), built on Apr 15 2025 21:25:47 by "admin" with MS VC++ 17.7 (VS2022)
+
+END.

@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "ashok2102/python1:latest"
+        IMAGE_NAME = "098588167308.dkr.ecr.ap-south-1.amazonaws.com/jenkins:latest"
     }
 
     stages {
@@ -35,7 +35,7 @@ pipeline {
             }
         }
 
-        stage('Push to DockerHub') {
+        stage('Push to ECR') {
             steps {
                 script {
                     sh "docker push ${IMAGE_NAME}"
@@ -43,27 +43,20 @@ pipeline {
             }
         }
 
-        stage('Pull from DockerHub') {
+/*        stage('Pull from DockerHub') {
             steps {
                 script {
                     sh "docker pull ${IMAGE_NAME}"
                 }
             }
-        }
+        } */
 
-        stage('Run Docker Container') {
+/*        stage('Run Docker Container') {
             steps {
                 script {
                     sh "docker run -itd -p 5000:5000 ${IMAGE_NAME}"
                 }
             }
-        }
-        stage('Cleanup') {
-            steps {
-                script {
-                    sh "docker rmi ${IMAGE_NAME}"
-                }
-            }
-        }
+        } */
     }
 }
