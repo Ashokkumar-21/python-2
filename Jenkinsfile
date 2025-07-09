@@ -33,7 +33,7 @@ pipeline {
             }
         }
 
-        stage('Login to ECR') {
+        stage('Login to AWS ECR') {
             steps {
                 script {
                     sh '''
