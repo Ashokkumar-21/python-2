@@ -2,42 +2,44 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "098588167308.dkr.ecr.ap-south-1.amazonaws.com/jenkins:latest"
+        AWS_REGION = 'ap-south-1'
+        AWS_ACCOUNT_ID = '098588167308'    
+        ECR_REPO_NAME = 'jenkins'           
+        IMAGE_TAG = 'v2'
+        ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+        FULL_IMAGE_NAME = "${ECR_REGISTRY}/${ECR_REPO_NAME}:${IMAGE_TAG}"
     }
 
     stages {
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM',
-                          branches: [[name: '*/main']],
-                          userRemoteConfigs: [[
-                              url: 'https://github.com/Ashokkumar-21/python-2.git'
-                          ]]
-                ])
+                checkout scm
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${IMAGE_NAME} ."
+                    sh 'docker build -t $ECR_REPO_NAME:$IMAGE_TAG .'
                 }
             }
         }
 
-        stage('Login to DockerHub') {
+        stage('Tag Image') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'dockerhub_credentials', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                    sh '''
-                        aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-                        aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-                        aws configure set region ap-south-1
+                    sh 'docker tag $ECR_REPO_NAME:$IMAGE_TAG $FULL_IMAGE_NAME'
+                }
+            }
+        }
 
-                        aws ecr get-login-password --region ap-south-1 | \
-                        docker login --username AWS --password-stdin 098588167308.dkr.ecr.ap-south-1.amazonaws.com
+        stage('Login to ECR') {
+            steps {
+                script {
+                    sh '''
+                        aws ecr get-login-password --region $AWS_REGION | \
+                        docker login --username AWS --password-stdin $ECR_REGISTRY
                     '''
-                    }
                 }
             }
         }
@@ -45,25 +47,9 @@ pipeline {
         stage('Push to ECR') {
             steps {
                 script {
-                    sh "docker push ${IMAGE_NAME}"
+                    sh 'docker push $FULL_IMAGE_NAME'
                 }
             }
         }
-
-/*        stage('Pull from DockerHub') {
-            steps {
-                script {
-                    sh "docker pull ${IMAGE_NAME}"
-                }
-            }
-        } */
-
-/*        stage('Run Docker Container') {
-            steps {
-                script {
-                    sh "docker run -itd -p 5000:5000 ${IMAGE_NAME}"
-                }
-            }
-        } */
     }
 }
